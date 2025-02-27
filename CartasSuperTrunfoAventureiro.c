@@ -10,7 +10,7 @@ int main() {
     int carta;
     char codigo[4];
     int populacao;
-    char estado[1];
+    char estado[2];
     float area;
     char cidade[30];
     float PIB;
