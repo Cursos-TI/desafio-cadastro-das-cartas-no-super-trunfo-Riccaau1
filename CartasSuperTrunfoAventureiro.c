@@ -7,15 +7,23 @@
 int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos. 
+    int carta;
+    char estado[1];
     char codigo[4];
     char nome[30];
     int populacao;
     float area;
     float PIB;
     int pontos_tur;
+    float densidade_pop;
+    float PIB_per_capita;
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
+    printf("Digite o número da carta: \n");
+    scanf("%d", &carta);
+    printf("Digite o estado: \n");
+    scanf("%s", estado);
     printf("Digite o código da cidade: \n");
     scanf("%s", codigo);
     printf("Digite o nome da cidade: \n");
@@ -31,12 +39,18 @@ int main() {
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    densidade_pop = (populacao / area);
+    PIB_per_capita = (PIB / populacao);
+
+
     printf("Código: %s\n", codigo);
     printf("Nome: %s\n", nome);
     printf("População: %d Habitantes\n", populacao);
     printf("Área: %.2f Km²\n", area);
-    printf("PIB: %.2f\n", PIB);
+    printf("PIB: R$%.2f\n", PIB);
     printf("Pontos Turísticos: %d\n", pontos_tur);
+    printf("Densidade Populacional: %.2f hab/Km²\n", densidade_pop);
+    printf("PIB per capita: R$%.2f\n", PIB_per_capita);
 
     return 0;
 }
